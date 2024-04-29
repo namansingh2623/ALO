@@ -1,6 +1,7 @@
 
 import numpy as np
 
+
 # F1
 def F1(x):
     return np.sum(x**2)
@@ -14,7 +15,7 @@ def F3(x):
     dim = len(x)
     total = 0
     for i in range(dim):
-        total += np.sum(x[:i+1])**2
+        total += np.power(np.sum(x[:i+1]),2)
     return total
 
 # F4
@@ -42,7 +43,7 @@ def F8(x):
 # F9
 def F9(x):
     dim = len(x)
-    return np.sum(x**2 - 10 * np.cos(2 * np.pi * x)) + 10 * dim
+    return np.sum(np.power(x, 2) - 10 * np.cos(2 * np.pi * np.array(x))) + 10 * dim
 
 # F10
 def F10(x):
