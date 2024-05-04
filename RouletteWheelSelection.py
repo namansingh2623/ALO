@@ -10,7 +10,4 @@ def roulette_wheel_selection(weights):
             break
     return chosen_index
 
-# Example usage:
-# weights = [1, 5, 3, 15, 8, 1]
-# choice = roulette_wheel_selection(weights)
-# print("Most probable result is", choice + 1, "(weights", weights[choice], ")")
+

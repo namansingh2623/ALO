@@ -4,12 +4,12 @@ def initialization(SearchAgents_no, dim, ub, lb):
     ub=np.array([ub] * dim)
     lb=np.array([lb] * dim)
     print(type(ub))
-    Boundary_no = len(ub)  # Number of boundaries
+    Boundary_no = len(ub)  
 
-    # If the boundaries of all variables are equal
+    
     if Boundary_no == 1:
         X = np.random.rand(SearchAgents_no, dim) * (ub - lb) + lb
-    # If each variable has a different lb and ub
+   
     elif Boundary_no > 1:
         X = np.zeros((SearchAgents_no, dim))
         for i in range(dim):
