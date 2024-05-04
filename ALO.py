@@ -1,7 +1,7 @@
 import numpy as np
 from initialization import initialization
-from RouletteWheelSelection import RouletteWheelSelection
-from Random_walk_around_antlion import Random_walk_around_antlion
+from RouletteWheelSelection import roulette_wheel_selection
+from Random_walk_around_antlion import random_walk_around_antlion
 
 def ALO(N, Max_iter, lb, ub, dim, fobj):
     # Initialize the positions of antlions and ants
@@ -37,15 +37,15 @@ def ALO(N, Max_iter, lb, ub, dim, fobj):
         # This for loop simulates random walks
         for i in range(ant_position.shape[0]):
             # Select ant lions based on their fitness (the better anlion the higher chance of catching ant)
-            Rolette_index = RouletteWheelSelection(1 / sorted_antlion_fitness)
+            Rolette_index = roulette_wheel_selection(1 / sorted_antlion_fitness)
             if Rolette_index == -1:
                 Rolette_index = 1
 
             # RA is the random walk around the selected antlion by roulette wheel
-            RA = Random_walk_around_antlion(dim, Max_iter, lb, ub, Sorted_antlions[Rolette_index, :], Current_iter)
+            RA = random_walk_around_antlion(dim, Max_iter, lb, ub, Sorted_antlions[Rolette_index, :], Current_iter)
 
             # RA is the random walk around the elite (best antlion so far)
-            RE = Random_walk_around_antlion(dim, Max_iter, lb, ub, Elite_antlion_position, Current_iter)
+            RE = random_walk_around_antlion(dim, Max_iter, lb, ub, Elite_antlion_position, Current_iter)
 
             ant_position[i, :] = (RA[Current_iter, :] + RE[Current_iter, :]) / 2  # Equation (2.13) in the paper
 
