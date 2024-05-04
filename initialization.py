@@ -22,12 +22,12 @@ def initialization(SearchAgents_no, dim, ub, lb):
 # the initial positions of the search agents, where 
 # each row represents a search agent and each column represents a variable dimension.
 # Example usage:
-# SearchAgents_no = 50
-# dim = 10
-# ub = 10  # Example upper bounds
-# lb = -10
+SearchAgents_no = 9
+dim = 5
+ub = 5  # Example upper bounds
+lb = -5
 
-#   # Example lower bounds
+  # Example lower bounds
 
-# X = initialization(SearchAgents_no, dim, ub, lb)
-# print(X)
+X = initialization(SearchAgents_no, dim, ub, lb)
+print(X)
