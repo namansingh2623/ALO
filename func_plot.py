@@ -180,4 +180,4 @@ def F22(x, y, z, t):
 def F23(x, y, z, t):
     return (x - 0.5)**2 - np.cos(2 * np.pi * (x - 0.5)) + (y - 0.5)**2 - np.cos(2 * np.pi * (y - 0.5)) + (z - 0.5)**2 - np.cos(2 * np.pi * (z - 0.5)) + (t - 0.5)**2 - np.cos(2 * np.pi * (t - 0.5))
 
-# func_plot('F18')  # Replace 'F1' with any function name you want to plot
+# func_plot('F1')  # Replace 'F1' with any function name you want to plot

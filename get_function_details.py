@@ -1,6 +1,170 @@
 
 import numpy as np
 
+def get_functions_details(F):
+    """
+    Returns the details of the selected benchmark function.
+    
+    Parameters:
+        F (str): Name of the test function (e.g., 'F1', 'F2', ..., 'F23').
+        
+    Returns:
+        lb (float or list): Lower bound(s) of the function's variables.
+        ub (float or list): Upper bound(s) of the function's variables.
+        dim (int): Number of variables.
+        fobj (function): Handle to the objective function.
+    """
+    fobj = None
+    lb = None
+    ub = None
+    dim = None
+    
+    if F == 'F1':
+        fobj = F1
+        lb = -100
+        ub = 100
+        dim = 10
+    elif F == 'F2':
+
+        fobj = F2
+        lb = -10
+        ub = 10
+        dim = 10
+    elif F == 'F3':
+        fobj = F3
+        lb = -100
+        ub = 100
+        dim = 10
+    elif F == 'F4':
+
+        fobj = F4
+        lb = -100
+        ub = 100
+        dim = 10
+    elif F == 'F5':
+
+        fobj = F5
+        lb = -30
+        ub = 30
+        dim = 10
+    elif F == 'F6':
+
+        fobj = F6
+        lb = -100
+        ub = 100
+        dim = 10
+    elif F == 'F7':
+
+        fobj = F7
+        lb = -1.28
+        ub = 1.28
+        dim = 10
+    elif F == 'F8':
+
+        fobj = F8
+        lb = -500
+        ub = 500
+        dim = 10
+    elif F == 'F9':
+
+        fobj = F9
+        lb = -5.12
+        ub = 5.12
+        dim = 10
+    elif F == 'F10':
+
+        fobj = F10
+        lb = -32
+        ub = 32
+        dim = 10
+    elif F == 'F11':
+       
+        fobj = F11
+        lb = -600
+        ub = 600
+        dim = 10
+    elif F == 'F12':
+        
+        fobj = F12
+        lb = -50
+        ub = 50
+        dim = 10
+    elif F == 'F13':
+        
+        fobj = F13
+        lb = -50
+        ub = 50
+        dim = 10
+    elif F == 'F14':
+        
+        fobj = F14
+        lb = -65.536
+        ub = 65.536
+        dim = 2
+    elif F == 'F15':
+        
+        fobj = F15
+        lb = -5
+        ub = 5
+        dim = 4
+    elif F == 'F16':
+        
+        fobj = F16
+        lb = -5
+        ub = 5
+        dim = 2
+    elif F == 'F17':
+        
+        fobj = F17
+        lb = [-5, 0]
+        ub = [10, 15]
+        dim = 2
+    elif F == 'F18':
+        
+        fobj = F18
+        lb = -2
+        ub = 2
+        dim = 2
+    elif F == 'F19':
+        
+        fobj = F19
+        lb = 0
+        ub = 1
+        dim = 3
+    elif F == 'F20':
+        
+        fobj = F20
+        lb = 0
+        ub = 1
+        dim = 6
+    elif F == 'F21':
+        
+        fobj = F21
+        lb = 0
+        ub = 10
+        dim = 4
+    elif F == 'F22':
+        
+        fobj = F22
+        lb = 0
+        ub = 10
+        dim = 4
+    elif F == 'F23':
+        
+        fobj = F23
+        lb = 0
+        ub = 10
+        dim = 4
+    else:
+        raise ValueError("Invalid function name.")
+    
+    lb = [lb] if not isinstance(lb, list) else lb
+    ub = [ub] if not isinstance(ub, list) else ub
+    
+    return lb, ub, dim, fobj
+
+# Example usage:
+# lb, ub, dim, fobj = get_functions_details('F1')
 
 # F1
 def F1(x):
