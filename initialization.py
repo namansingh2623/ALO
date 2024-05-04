@@ -19,6 +19,3 @@ def initialization(SearchAgents_no, dim, ub, lb):
 
     return X
 
-
-X = initialization(SearchAgents_no, dim, ub, lb)
-print(X)
