@@ -18,16 +18,7 @@ def initialization(SearchAgents_no, dim, ub, lb):
             X[:, i] = np.random.rand(SearchAgents_no) * (ub_i - lb_i) + lb_i
 
     return X
-# This code will initialize a matrix X containing 
-# the initial positions of the search agents, where 
-# each row represents a search agent and each column represents a variable dimension.
-# Example usage:
-SearchAgents_no = 9
-dim = 5
-ub = 5  # Example upper bounds
-lb = -5
 
-  # Example lower bounds
 
 X = initialization(SearchAgents_no, dim, ub, lb)
 print(X)
